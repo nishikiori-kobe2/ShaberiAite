@@ -121,3 +121,8 @@ MIT License
 
 Made with ❤️ using Streamlit, LangChain, and Gemini AI
 
+----------------------------------------------------
+🔗 便利なリンク
+アプリURL: あなたのRenderのURL
+GitHubリポジトリ: https://github.com/nishikiori-kobe2/ShaberiAite
+Render Dashboard: https://dashboard.render.com/
