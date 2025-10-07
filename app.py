@@ -58,7 +58,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # タイトル
-st.title("💬 喋り相手")
+st.markdown("<h3 style='text-align: center; color: #667eea; font-size: 1rem; margin-top: 0.5rem; margin-bottom: 0.5rem;'>💬 喋り相手</h3>", unsafe_allow_html=True)
 
 # キャラクター定義
 CHARACTERS = {
@@ -105,17 +105,12 @@ if "selected_character" not in st.session_state:
     st.session_state.selected_character = "ゆうちゃみ"
 
 # キャラクター選択
-col1, col2 = st.columns([3, 1])
-with col1:
-    selected_character = st.selectbox(
-        "会話する相手を選んでください",
-        options=list(CHARACTERS.keys()),
-        index=list(CHARACTERS.keys()).index(st.session_state.selected_character),
-        key="character_selector"
-    )
-
-with col2:
-    st.markdown(f"<div style='text-align: center; font-size: 1.5rem; margin-top: 0.5rem;'>{CHARACTERS[selected_character]['emoji']}</div>", unsafe_allow_html=True)
+selected_character = st.selectbox(
+    "会話する相手を選んでください",
+    options=list(CHARACTERS.keys()),
+    index=list(CHARACTERS.keys()).index(st.session_state.selected_character),
+    key="character_selector"
+)
 
 # キャラクター変更時の処理
 if selected_character != st.session_state.selected_character:
@@ -160,8 +155,7 @@ with chat_container:
 
 # ユーザー入力フォーム
 st.markdown("---")
-st.markdown("##### 💭 メッセージを送る")
-st.markdown("<div style='margin-bottom: 0.5rem;'></div>", unsafe_allow_html=True)
+st.markdown("<p style='font-size: 1rem; font-weight: bold; margin-top: 0.5rem; margin-bottom: 0.5rem;'>💭 メッセージを送る</p>", unsafe_allow_html=True)
 
 with st.form(key="message_form", clear_on_submit=True):
     user_input = st.text_area(
