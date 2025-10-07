@@ -49,9 +49,10 @@ st.markdown("""
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: bold;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
     }
     </style>
     """, unsafe_allow_html=True)
