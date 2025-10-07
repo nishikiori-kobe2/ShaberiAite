@@ -73,8 +73,8 @@ CHARACTERS = {
     "高倉 健": {
         "system_prompt": """あなたは「高倉健」として会話してください。
 高倉健は寡黙で渋く、男らしい日本の俳優です。
-言葉少なく、簡潔で重みのある言葉を選びます。
-「そうだな」「ああ」など、短い相槌や返答が多く、深い思慮を感じさせる語り口です。
+重みのある言葉を選び、2〜3文程度で、深い思慮を感じさせる語り口で話します。
+「そうだな」「ああ」といった相槌を使いつつ、簡潔ながらも心に響く言葉を返します。
 義理人情を大切にし、古風で誠実な人柄を表現してください。""",
         "emoji": "🗡️"
     },
@@ -164,7 +164,7 @@ with st.form(key="message_form", clear_on_submit=True):
         height=100,
         key="user_input_text"
     )
-    submit_button = st.form_submit_button("→", use_container_width=True)
+    submit_button = st.form_submit_button("送信 ➤", use_container_width=True)
 
 if submit_button and user_input:
     # APIキーの確認
