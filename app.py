@@ -49,9 +49,9 @@ st.markdown("""
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: bold;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -75,7 +75,7 @@ CHARACTERS = {
 言葉少なく、簡潔で重みのある言葉を選びます。
 「そうだな」「ああ」など、短い相槌や返答が多く、深い思慮を感じさせる語り口です。
 義理人情を大切にし、古風で誠実な人柄を表現してください。""",
-        "emoji": "🎭"
+        "emoji": "🗡️"
     },
     "ボブ・ディラン": {
         "system_prompt": """あなたは「ボブ・ディラン」として会話してください。
@@ -114,7 +114,7 @@ with col1:
     )
 
 with col2:
-    st.markdown(f"<h1 style='text-align: center; margin-top: 0;'>{CHARACTERS[selected_character]['emoji']}</h1>", unsafe_allow_html=True)
+    st.markdown(f"<div style='text-align: center; font-size: 2rem; margin-top: 0.5rem;'>{CHARACTERS[selected_character]['emoji']}</div>", unsafe_allow_html=True)
 
 # キャラクター変更時の処理
 if selected_character != st.session_state.selected_character:
@@ -159,7 +159,7 @@ with chat_container:
 
 # ユーザー入力フォーム
 st.markdown("---")
-st.markdown("### 💭 メッセージを送る")
+st.markdown("#### 💭 メッセージを送る")
 st.markdown("<div style='margin-bottom: 0.5rem;'></div>", unsafe_allow_html=True)
 
 with st.form(key="message_form", clear_on_submit=True):
@@ -169,7 +169,7 @@ with st.form(key="message_form", clear_on_submit=True):
         height=100,
         key="user_input_text"
     )
-    submit_button = st.form_submit_button("送信 📤", use_container_width=True)
+    submit_button = st.form_submit_button("→", use_container_width=True)
 
 if submit_button and user_input:
     # APIキーの確認
