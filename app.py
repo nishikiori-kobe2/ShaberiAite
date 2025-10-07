@@ -49,9 +49,9 @@ st.markdown("""
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -114,7 +114,7 @@ with col1:
     )
 
 with col2:
-    st.markdown(f"<div style='text-align: center; font-size: 2rem; margin-top: 0.5rem;'>{CHARACTERS[selected_character]['emoji']}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='text-align: center; font-size: 1.5rem; margin-top: 0.5rem;'>{CHARACTERS[selected_character]['emoji']}</div>", unsafe_allow_html=True)
 
 # キャラクター変更時の処理
 if selected_character != st.session_state.selected_character:
@@ -159,7 +159,7 @@ with chat_container:
 
 # ユーザー入力フォーム
 st.markdown("---")
-st.markdown("#### 💭 メッセージを送る")
+st.markdown("##### 💭 メッセージを送る")
 st.markdown("<div style='margin-bottom: 0.5rem;'></div>", unsafe_allow_html=True)
 
 with st.form(key="message_form", clear_on_submit=True):
